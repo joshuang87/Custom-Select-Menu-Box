@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.select_box{
+    width: 300px;
+    height: 45px;
+    border: 2px solid rgba(0,0,0,.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 20px;
+    cursor: pointer;
+}
+
+.select_box:hover,
+.select_box:active{
+    border: 2px solid #7fb5ff;
+    box-shadow: 0 0 0 4px #c4ddff;
+}
+
+.select_box .bx-chevron-down{
+    font-size: 25px;
+    transition: all .2s ease;
+}
+
+.select_box.active .bx-chevron-down{
+    transform: rotate(180deg);
+}
+
+.select_item_box{
+    width: 300px;
+    box-shadow: 0 0 6px rgba(0,0,0,.2);
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 20px 15px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.select_box.active ~ .select_item_box{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.select_item{
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5px 0;
+    transition: all .2s ease;
+}
+
+.select_item:hover{
+    background-color: #c4ddff;
+}
+
+.select_item .item_name{
+    width: 100%;
+    margin-left: 10px;
+}
+
+.select_item i.bx{
+    font-size: 18px;
+}
